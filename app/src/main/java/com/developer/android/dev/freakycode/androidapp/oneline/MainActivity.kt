@@ -21,16 +21,11 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    @Inject
-    lateinit var tweetsAPI: TweetsAPI
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        GlobalScope.launch {
-            var response = tweetsAPI.getCategory()
-            Log.d("TWEETS", response.body()?.distinct().toString())
-        }
+
 
         setContent {
 //            OneLineTheme {
