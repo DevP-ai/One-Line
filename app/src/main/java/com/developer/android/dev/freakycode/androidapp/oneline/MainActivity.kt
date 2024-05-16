@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.developer.android.dev.freakycode.androidapp.oneline.api.TweetsAPI
+import com.developer.android.dev.freakycode.androidapp.oneline.screens.CategoryScreen
 import com.developer.android.dev.freakycode.androidapp.oneline.ui.theme.OneLineTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.GlobalScope
@@ -28,15 +29,15 @@ class MainActivity : ComponentActivity() {
 
 
         setContent {
-//            OneLineTheme {
-//                // A surface container using the 'background' color from the theme
-//                Surface(
-//                    modifier = Modifier.fillMaxSize(),
-//                    color = MaterialTheme.colorScheme.background
-//                ) {
-//
-//                }
-//            }
+            OneLineTheme {
+                // A surface container using the 'background' color from the theme
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    CategoryScreen()
+                }
+            }
         }
     }
 }
